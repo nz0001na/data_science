@@ -4,8 +4,8 @@
 # Practice some SELECT queries: based on Northwinds database
 1. List all the products in the Northwinds database showing productid, productname, quantity per unit, unitprice, and unitsinstock.
 
-      select productid, productname, quantityperunit, unitprice, unitsinstock
-    	from products;
+            select productid, productname, quantityperunit, unitprice, unitsinstock
+            from products;
   
 2. For all employees at Northwinds, list the first name and last name concatenated together with a blank space in-between, and the YEAR when they were hired.  
 
