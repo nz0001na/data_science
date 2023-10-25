@@ -1,7 +1,8 @@
 # SQL Practice from Coursera: [[The Structured Query Language (SQL)]](https://www.coursera.org/learn/the-structured-query-language-sql?specialization=databases-for-data-scientists)
 
+based on Northwinds database
 
-# Practice some SELECT queries: based on Northwinds database
+# Practice some SELECT queries
 1. List all the products in the Northwinds database showing productid, productname, quantity per unit, unitprice, and unitsinstock.
 
             select productid, productname, quantityperunit, unitprice, unitsinstock
