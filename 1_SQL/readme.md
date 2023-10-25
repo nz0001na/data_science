@@ -20,3 +20,5 @@
 
 6. For all employees at Northwinds, list the first name and last name concatenated together with a blank space in-between with a column header “Name”, and the name of the month (spelled out) for each employee’s birthday.  
 
+            select concat(firstname,' ', lastname) as "Name", birthdate, to_char(birthdate, 'month')
+	from employees;
