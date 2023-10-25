@@ -7,9 +7,12 @@
             select productid, productname, quantityperunit, unitprice, unitsinstock
             from products;
   
-2. For all employees at Northwinds, list the first name and last name concatenated together with a blank space in-between, and the YEAR when they were hired.  
+2. For all employees at Northwinds, list the first name and last name concatenated together with a blank space in-between, and the YEAR when they were hired.
+   
+            select concat(firstname,' ', lastname), hiredate, date_part('year', hiredate)
+            from employees;
 
-3. For all products in the Northwinds database, list the productname, unitprice, unitsinstock,  and the total value of the inventory of that product as “Total Value”.  (HINT:  total value = unitsinstock * unitprice.) 
+4. For all products in the Northwinds database, list the productname, unitprice, unitsinstock,  and the total value of the inventory of that product as “Total Value”.  (HINT:  total value = unitsinstock * unitprice.) 
 
-4. For all employees at Northwinds, list the first name and last name concatenated together with a blank space in-between with a column header “Name”, and the name of the month (spelled out) for each employee’s birthday.  
+5. For all employees at Northwinds, list the first name and last name concatenated together with a blank space in-between with a column header “Name”, and the name of the month (spelled out) for each employee’s birthday.  
 
