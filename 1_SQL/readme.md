@@ -61,3 +61,52 @@ based on Northwinds database
 		      shippeddate between '1996-12-01' and '1997-01-31';
 
 
+# Practice some SELECT queries using DATE functions
+
+* List the employeeid, firstname + lastname concatenated as ‘employee’, and the age of the employee  when they were hired.
+
+		SELECT EmployeeID, Firstname || ' ' || Lastname as "employee",
+			cast (age(HireDate, BirthDate) as text) AS HIRE_AGE 
+		FROM employees;
+
+  		SELECT EmployeeID, concat(Firstname, ' ', Lastname) as "employee",
+		 	age(HireDate, BirthDate)::text AS "HIRE_AGE" 
+		FROM employees;
+
+* Run a query to calculate your age as of today.  
+
+		SELECT cast (age(now(),'2010-09-08')as text);
+
+		SELECT age(current_date, to_date('20100908', 'YYYYMMDD'))::text as "My Age";
+  
+* List the employeeid, firstname + lastname concatenated as ‘employee’, and hire date for all employees hired in 1993
+		
+		SELECT EmployeeID, Firstname || ' ' || Lastname as "employee", hiredate 
+		FROM employees 
+		WHERE Date_part('year', hiredate) = 1993; 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
