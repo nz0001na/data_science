@@ -122,6 +122,49 @@ based on Northwinds database
 		HAVING count(orderid) > 100 
 		ORDER BY 2 desc;  
 
+# Practice some SELECT queries using subqueries
+
+* List the productid, productname, unitprice of the lowest priced product Northwinds sells. 
+
+		select productID, productname, unitprice 
+		from products 
+		where UnitPrice = ( 
+			select MIN(UnitPrice)  
+			from products ); 
+
+		select productID, productname, unitprice 
+		from products 
+		order by unitprice limit 1;
+
+* How many orders in the orders table have a bad customerID (either missing or not on file in the customers table.) 
+
+		SELECT count(orderid) 
+		FROM orders 
+		WHERE customerid is NULL or
+                      customerid NOT IN ( 
+				SELECT customerID
+	  			FROM customers); 
+
+* Use a subquery in a SELECT to list productname and its totoal values.  
+
+		SELECT productname, ( SELECT SUM(unitprice*quantity)
+					from orderdetails O
+					where O.productid = P.productid) as Total
+		FROM products P; 
+
+* Use a subquery in a FROM to list orderid that have less than 100 quantity. 
+
+		SELECT orderid
+		FROM (  SELECT orderid, SUM(quantity)
+			FROM orderdetals
+			GROUP BY orderid
+			HAVING SUM(quantity) < 100
+			) as DetailCount;
+
+
+
+
+
 
 
 
