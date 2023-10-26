@@ -85,6 +85,42 @@ based on Northwinds database
 		FROM employees 
 		WHERE Date_part('year', hiredate) = 1993; 
 
+# Practice some SELECT queries using GROUP functions and GROUP BY
+
+* List the total (unitprice * quantity) as “Total Value” by orderid for the top 5 orders.  (That is, the five orders with the highest Total Value.)  
+
+		SELECT OrderID,  SUM(UnitPrice * Quantity) AS "Total Value"  
+		FROM orderdetails 
+		GROUP BY OrderID 
+		ORDER BY 2 DESC LIMIT 5; 
+
+* How many products does Northwinds have in inventory?
+  
+		SELECT count(productid)  
+		FROM products 
+		Where unitsinstock > 0; 
+
+
+* How many products are out of stock? 
+
+		SELECT count(productid)  
+		FROM products 
+		Where unitsinstock = 0; 
+
+* From which supplier(s) does Northwinds carry the fewest products? 
+
+		SELECT supplierid, count(productid)  
+		FROM products 
+		GROUP BY supplierid 
+		ORDER BY 2 limit 1;  
+
+* Which Northwinds employees (just show their employeeid) had over 100 orders ? 
+
+		SELECT employeeid, count(orderid) AS "Orders"  
+		FROM orders 
+		GROUP BY employeeid 
+		HAVING count(orderid) > 100 
+		ORDER BY 2 desc;  
 
 
 
