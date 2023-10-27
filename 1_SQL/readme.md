@@ -162,6 +162,60 @@ based on Northwinds database
 			) as DetailCount;
 
 
+# Practice some SELECT queries using inner joins
+
+* List each order and its Total Value (unitprice * quantity) for all orders shipping into France in descending Total Value order.  
+
+		SELECT O.orderID, sum(unitprice * quantity) as "Total Value"  
+		FROM orders O  
+		  JOIN orderdetails D  
+		       ON O.orderid = D.orderid 
+		    WHERE shipcountry = 'France' 
+		GROUP BY O.orderid     
+		ORDER BY 2 DESC; 
+
+		SELECT O.orderID, sum(unitprice * quantity) as "Total Value"  
+		FROM orders O,  orderdetails D
+		WHERE O.orderid = D.orderid and shipcountry = 'France'          
+		GROUP BY O.orderid     
+		ORDER BY 2 DESC; 
+
+     
+* Create a Suppliers List showing Supplier CompanyName, and names of all the products sold by each supplier located in Japan.   
+		
+		SELECT companyname, productname 
+		FROM suppliers S  
+			JOIN products P 
+			ON S.supplierID = P.supplierID 
+		WHERE S.country = 'Japan'; 
+
+		SELECT companyname, productname 
+		FROM suppliers S,  products P  
+		WHERE S.supplierID = P.supplierID and S.country = 'Japan'; 
+  
+* Create a “Low Performers” list showing the employees who have less than $100,000 in total sales.  List the employee’s LastName, FirstName followed by their total sales volume (the total dollar value of their orders.)    
+
+		SELECT LastName, Firstname, sum(unitprice * quantity) as "Total Sales"
+		FROM employees E 
+			JOIN 
+			orders O 
+			ON E.employeeid  =  O.employeeid
+			      JOIN 
+			      orderdetails D 
+			      ON O.orderid  =  D.orderid
+		GROUP BY LastName, FirstName
+		HAVING  sum(unitprice * quantity) < 100000;
+
+
+		SELECT LastName, Firstname, sum(unitprice * quantity) as "Total Sales"
+		FROM employees E, orders O, orderdetails D
+		WHERE E.employeeid  =  O.employeeid AND O.orderid  =  D.orderid
+		GROUP BY LastName, FirstName
+		HAVING  sum(unitprice * quantity) < 100000;
+  
+
+
+
 
 
 
