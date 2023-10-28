@@ -291,7 +291,7 @@ Solution:
 
 * Verify that your table was created and populated successfully
 
-	Select * from items
+		Select * from items
 
 
 
