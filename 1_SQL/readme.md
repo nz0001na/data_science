@@ -254,13 +254,44 @@ based on Northwinds database
 		GROUP BY S.shipperid, companyname
 		HAVING count(orderid) = 0;
 
+# Create an Tables/Views
+* create an “items” table with the following schema:
+  
+		itemID integer primary key, 
+		itemcode varchar(5) null,
+		itemname varchar(40) not null default “ “,
+		quantity integer not null default 0,
+		price decimal (9,2) not null default 0
+
+Solution: 
+
+		CREATE TABLE items  
+		(  
+		    itemID     INT           primary key, 
+		    itemcode   VARCHAR(5)    NULL, 
+		    itemname   VARCHAR(40)   NOT NULL DEFAULT ' ', 
+		    quantity   INT           NOT NULL DEFAULT 0, 
+		    price      DECIMAL(9,2)  NOT NULL DEFAULT 0 
+		  ); 
 
 
 
+* Populate your new table with data from the Products table: 
+	Consisting of productid, 
+	concat(supplierid, categoryid,discontinued),
+	productname, unitsinstock, unitprice
 
+Solution: 
 
+		INSERT INTO items 
+			(SELECT productid,  
+			concat(supplierid, categoryid,discontinued),  
+				productname, unitsinstock, unitprice  
+			from products); 
 
+* Verify that your table was created and populated successfully
 
+	Select * from items
 
 
 
