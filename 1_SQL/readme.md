@@ -213,8 +213,40 @@ based on Northwinds database
 		GROUP BY LastName, FirstName
 		HAVING  sum(unitprice * quantity) < 100000;
   
+# Practice some SELECT queries using outer joins
 
+* Are there any Northwinds employees that have no orders?  
 
+		SELECT E.employeeid, lastname, firstname, count(orderid)
+		FROM employees E  LEFT OUTER JOIN
+		    	orders O  ON E.employeeid = O.employeeid 
+		GROUP BY E.employeeid, lastname, firstname
+		Having count(orderid) = 0
+		ORDER BY E.employeeid;
+
+* Are there any Northwinds customers that have no orders?  
+
+		SELECT C.customerid, companyname, count(orderid)
+		FROM customers C  LEFT OUTER JOIN
+			orders O  ON C.customerid = O.customerid 
+		GROUP BY C.customerid, companyname
+		HAVING count(orderid) = 0;
+
+* Are there any Northwinds orders that have bad (not on file) customer numbers?
+  
+		SELECT DISTINCT O.customerid, count(orderid)
+		FROM orders O LEFT OUTER JOIN
+			customers C on C.customerid = O.customerid 
+		WHERE C.customerid is NULL
+		GROUP BY O.customerid;
+
+		SELECT DISTINCT C.customerid, count(orderid)
+		FROM customers C RIGHT OUTER JOIN
+		 	orders O on C.customerid = O.customerid 
+		WHERE C.customerid is NULL
+		GROUP BY c.customerid;
+
+* Are there any Shippers that have shipped no Northwinds orders? 
 
 
 
