@@ -248,7 +248,11 @@ based on Northwinds database
 
 * Are there any Shippers that have shipped no Northwinds orders? 
 
-
+		SELECT S.shipperid, companyname, count(orderid)
+		FROM shippers S LEFT OUTER JOIN orders O  
+			ON S.shipperid = O.shipvia 
+		GROUP BY S.shipperid, companyname
+		HAVING count(orderid) = 0;
 
 
 
