@@ -385,8 +385,35 @@ Solution:
 
 		Select * from topcustomers
 
-* 
+# CASE statement
 
+* Let’s drop and recreate your view topcustomers, adding a CASE expression.  Add a third column to your view called “Assessment”.
+
+    Set the Assessment column equal to “Needs Focus” if the customer’s total sales is less than $60,000
+
+    Set the Assessment column equal to “Average” if the customer’s total sales is greater than or equal to $60,000 but less than $115,000.
+
+    Otherwise set the Assessment column equal to “Outstanding” if the customer’s total sales is greater than or equal to $115,000.
+
+
+		DROP VIEW TopCustomers;
+		
+		create view TopCustomers as 
+		SELECT companyname, sum(unitprice * quantity) as "Total Sales",
+		  CASE  
+		        WHEN sum(unitprice * quantity) < 60000 THEN 'NeedsFocus'
+		        WHEN sum(unitprice * quantity) < 110000 THEN 'Average'
+		        ELSE 'Outstanding'
+		  END  Assessment
+		FROM customers C JOIN
+		    orders O ON C.customerid  =  O.customerid JOIN 
+		          orderdetails D ON O.orderid  =  D.orderid
+		GROUP BY companyname 
+		Order By 2 desc LIMIT 5;
+
+* Run a Query Against Your View to see the CASE results
+  
+		SELECT * FROM TopCustomers
 
 
 
