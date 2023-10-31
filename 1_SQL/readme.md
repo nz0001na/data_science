@@ -447,26 +447,77 @@ For this lab you must create and execute queries against the ClassicModels datab
 
 1. List  the names of the cities in alphabetical order where Classic Models has offices. (7)
 
+		select city 
+		from offices 
+		order by city; 
 
 2. List the EmployeeNumber, LastName, FirstName, Extension for all employees working out of the Paris office. (5)  
 
+		select employeenumber, lastname, firstname, extension  
+		from employees 
+		where officecode in (
+			select officecode
+   			from offices
+   			where city = 'Paris'
+			);
 
 3. List the ProductCode, ProductName, ProductVendor, QuantityInStock and ProductLine for all products with a QuantityInStock between 200 and 1200. (11) 
 
+		select ProductCode, ProductName, ProductVendor, quantityinstock, productline 
+		from products  
+		where quantityinstock between 200 and 1200; 
 
 4. (Use a SUBQUERY) List the ProductCode, ProductName, ProductVendor, BuyPrice and MSRP for the least expensive (lowest MSRP) product sold by ClassicModels.  (“MSRP” is the Manufacturer’s Suggested Retail Price.)  (1)    
 
+		select Productcode, ProductName,  productvendor, buyprice, MSRP   
+		from products  
+		where MSRP = ( 
+			select min(msrp) from products);
 
 5. What is the ProductName and Profit of the product that has the highest profit (profit = MSRP minus BuyPrice). (1)   
 
+		select ProductName, (MSRP – BuyPrice) as PROFIT   
+		from products  
+		order by profit desc limit 1;
 
+
+ 		select ProductName, (MSRP – BuyPrice) as PROFIT   
+		from products  
+		where (MSRP – BuyPrice) = ( 
+			select max((MSRP – BuyPrice))
+   			from products);
+   
 6. List the country and the number of customers from that country for all countries having just two  customers.  List the countries sorted in ascending alphabetical order. Title the column heading for the count of customers as “Customers”.(7)   
 
+		Select distinct country, count(*) as customers
+		from Customers
+		group by country
+		having count(*) = 2 
+		order by 1 asc; 
 
 7. List the ProductCode, ProductName, and number of orders for the products with exactly 25 orders.  Title the column heading for the count of orders as “OrderCount”. (12)  
 
+		Select p.productcode, productname, count(ordernumber) as OrderCount  	
+		from products p join orderdetails o 
+			on p.productcode = o.productcode     
+		group by productcode, productname 
+		having OrderCount = 25;
+
+		Select p.productcode, productname, count(ordernumber) as OrderCount  	
+		from products p, orderdetails o 
+		where p.productcode = o.productcode     
+		group by productcode, productname 
+		having OrderCount = 25;
 
 8. List the EmployeeNumber, Firstname + Lastname  (concatenated into one column in the answer set, separated by a blank and referred to as ‘name’) for all the employees reporting to Diane Murphy or Gerard Bondur. (8)  
+
+		Select employeenumber, concat(firstname, ' ', lastname) as "name"
+		from employees 
+		where reportsto in (
+			select employeenumber
+			from employees
+			where concat(firstname, ' ', lastname) in ('Diane Murphy', 'Gerard Bondur')
+		); 
 
 
 9. List the EmployeeNumber, LastName, FirstName of the president of the company (the one employee with no boss.)  (1)  
@@ -485,6 +536,8 @@ For this lab you must create and execute queries against the ClassicModels datab
 
 
 14. List the customername and total quantity of products ordered for customers who have ordered more than 1650 products across all their orders.  (8) 
+
+
 
 
 * Query DML/DDL Problems Using the Classic Models database
