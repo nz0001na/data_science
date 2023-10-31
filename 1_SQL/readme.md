@@ -361,7 +361,31 @@ Solution:
 
 		DROP TABLE demo
 
-# 
+# Use a View
+* Create a "TopCustomers" view  using the following SELECT statement to populate the view.
+
+  		SELECT companyname, sum(unitprice * quantity) as "Total Sales"
+		from customers C JOIN
+		    orders O ON C.customerid  =  O.customerid JOIN
+		          orderdetails D ON O.orderid  =  D.orderid
+		GROUP BY companyname 
+		Order By 2 desc LIMIT 5;
+
+Solution:
+		create view topcustomers as 
+		SELECT companyname, sum(unitprice * quantity) as "Total Sales"
+		  from customers C JOIN
+		    orders O ON C.customerid  =  O.customerid JOIN 
+		          orderdetails D ON O.orderid  =  D.orderid
+		GROUP BY companyname 
+		Order By 2 desc LIMIT 5;
+
+
+* Run a Query Against Your View to ensure that it works
+
+		Select * from topcustomers
+
+* 
 
 
 
