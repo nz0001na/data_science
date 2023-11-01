@@ -522,22 +522,64 @@ For this lab you must create and execute queries against the ClassicModels datab
 
 9. List the EmployeeNumber, LastName, FirstName of the president of the company (the one employee with no boss.)  (1)  
 
+		Select employeenumber, lastname, firstname 
+		from employees 
+		where reportsto is null; 
 
 10. List the ProductName for all products in the “Classic Cars” product line from the 1950’s.  (6)
 
+		Select productname  
+		from products 
+		where productline = "Classic Cars"  
+		 	and productname like "195%" 
+		order by productname;
 
 11. List the month name and the total number of orders for the month in 2004 in which ClassicModels customers placed the most orders. (1)  
+
+		select count(ordernumber), monthname(orderdate) as ordermonth  
+		from  orders  
+		where extract(year from orderdate) = '2004' 
+		group by ordermonth 
+		order by 1 desc limit 1;
+
+		select count(ordernumber), date_part('month', orderdate)::text as ordermonth  
+		from  orders  
+		where extract(year from orderdate) = '2004' 
+		group by ordermonth 
+		order by 1 desc limit 1;
 
 
 12. List the firstname, lastname of employees who are Sales Reps who have no assigned customers.  (2) 
 
+		select lastname, firstname 
+		from employees e left outer join customers c on
+			e.employeenumber = c.salesrepemployeenumber 
+		where customername is null  
+			and jobtitle = "Sales Rep";
+
 
 13. List the customername of customers from Switzerland with no orders. (2)  
 
-
+		select customername , country 
+		from customers c left outer join orders o on
+			c.customernumber = o.customernumber 
+		where o.customernumber is null    
+			and country = 'Switzerland';
+   
 14. List the customername and total quantity of products ordered for customers who have ordered more than 1650 products across all their orders.  (8) 
 
+		select customername, sum(quantityordered) as totalq 
+		from customers c  
+			join orders o on c.customernumber = o.customernumber 
+			join orderdetails d on o.ordernumber = d.ordernumber 
+		group by customername  
+		having totalq > 1650;
 
+		select customername, sum(quantityordered) as totalq 
+		from customers c, orders o, orderdetails d
+		where c.customernumber = o.customernumber and o.ordernumber = d.ordernumber 
+		group by customername  
+		having totalq > 1650;
 
 
 * Query DML/DDL Problems Using the Classic Models database
