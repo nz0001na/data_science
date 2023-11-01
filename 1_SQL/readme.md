@@ -593,28 +593,51 @@ For this lab you must create and execute queries against the ClassicModels datab
 			constraint  PKTopCustomers primary key (CustomerNumber) 
 		);
 
-3.  Populate the new table “TopCustomers” with the CustomerNumber, today’s date, and the total value of all their orders (PriceEach * quantityOrdered) for those customers whose order total value is greater than $140,000. (should insert 10 rows )
+2.  Populate the new table “TopCustomers” with the CustomerNumber, today’s date, and the total value of all their orders (PriceEach * quantityOrdered) for those customers whose order total value is greater than $140,000. (should insert 10 rows )
+
+		insert into TopCustomers 
+		select c.customernumber, CURRENT_date, SUM(priceEach * Quantityordered) 
+   		from Customers c, Orders o, OrderDetails d  	 	
+   		where c.Customernumber = o.Customernumber  
+   			and o.Ordernumber = d.Ordernumber 
+		group by c.Customernumber 
+		having SUM(priceEach * Quantityordered) > 140000;
+
+
+		insert into TopCustomers 
+		select c.customernumber, CURRENT_date, SUM(priceEach * Quantityordered) 
+   		from Customers c join Orders o on c.Customernumber = o.Customernumber  
+    			join OrderDetails d on o.Ordernumber = d.Ordernumber  	
+		group by c.Customernumber 
+		having SUM(priceEach * Quantityordered) > 140000;
+
+3.  List the contents of the TopCustomers table in descending OrderTotal sequence. (10) 
+
+		select * from topcustomers order by 3 desc; 
+
+4.  Add a new column to the TopCustomers table called OrderCount (integer).
+
+		alter table topcustomers 
+		add column OrderCount integer ; 
+
+5.  Update the Top Customers table, setting the OrderCount to a random number between 1 and 10.  Hint:  use (RANDOM() *10)
+
+		update topcustomers 
+		set ordercount = random()*10);
+
+6.  List the contents of the TopCustomers table in descending OrderCount sequence. (10 rows)
+
+		select * 
+		from topcustomers 
+		order by 4 desc;
+
+7.  Drop the TopCustomers table. (no answer set)  
+
+		Drop table topcustomers; 
 
 
 
-4.  List the contents of the TopCustomers table in descending OrderTotal sequence. (10) 
 
-
-
-5.  Add a new column to the TopCustomers table called OrderCount (integer).
-
-
-
-6.  Update the Top Customers table, setting the OrderCount to a random number between 1 and 10.  Hint:  use (RANDOM() *10)
-
-
-
-7.  List the contents of the TopCustomers table in descending OrderCount sequence. (10 rows)
-
-
-
-
-8.  Drop the TopCustomers table. (no answer set)  
 
 
 
