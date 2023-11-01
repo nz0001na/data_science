@@ -637,6 +637,22 @@ For this lab you must create and execute queries against the ClassicModels datab
 
 
 
+# Links for MySQL:
+
+1.  Here is the link to download MySQL Community Edition and MySQL Workbench:
+
+ https://dev.mysql.com/downloads
+
+2.  Here is the link to the YouTubeVideo tutorial on Installing MySQL and MySQL Workbench
+
+https://www.youtube.com/watch?v=u96rVINbAUI
+
+3.  Here is the link to download the script file to create the MySQL Sample "Classic Models" database.  
+
+ https://drive.google.com/file/d/15JGSiwNi8RwJGn745mDKCQbVMAJEOMfH/view?usp=sharing
+
+  
+
 
 
 
