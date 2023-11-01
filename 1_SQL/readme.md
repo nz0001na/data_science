@@ -586,30 +586,35 @@ For this lab you must create and execute queries against the ClassicModels datab
 
 1.  Create a NEW table named “TopCustomers” with three columns: CustomerNumber (integer), ContactDate (DATE) and  OrderTotal (a real number.)  None of these columns can be NULL.  
 
+		create table if not exists TopCustomers ( 
+			Customernumber int not null,  
+			ContactDate    DATE not null, 
+			OrderTotal  decimal(9,2) not null default 0,
+			constraint  PKTopCustomers primary key (CustomerNumber) 
+		);
 
-
-2.  Populate the new table “TopCustomers” with the CustomerNumber, today’s date, and the total value of all their orders (PriceEach * quantityOrdered) for those customers whose order total value is greater than $140,000. (should insert 10 rows )
-
-
-
-3.  List the contents of the TopCustomers table in descending OrderTotal sequence. (10) 
-
-
-
-4.  Add a new column to the TopCustomers table called OrderCount (integer).
+3.  Populate the new table “TopCustomers” with the CustomerNumber, today’s date, and the total value of all their orders (PriceEach * quantityOrdered) for those customers whose order total value is greater than $140,000. (should insert 10 rows )
 
 
 
-5.  Update the Top Customers table, setting the OrderCount to a random number between 1 and 10.  Hint:  use (RANDOM() *10)
+4.  List the contents of the TopCustomers table in descending OrderTotal sequence. (10) 
 
 
 
-6.  List the contents of the TopCustomers table in descending OrderCount sequence. (10 rows)
+5.  Add a new column to the TopCustomers table called OrderCount (integer).
+
+
+
+6.  Update the Top Customers table, setting the OrderCount to a random number between 1 and 10.  Hint:  use (RANDOM() *10)
+
+
+
+7.  List the contents of the TopCustomers table in descending OrderCount sequence. (10 rows)
 
 
 
 
-7.  Drop the TopCustomers table. (no answer set)  
+8.  Drop the TopCustomers table. (no answer set)  
 
 
 
