@@ -2,6 +2,7 @@
 
 Coursera link: https://www.coursera.org/professional-certificates/ibm-data-science
 
+
 * 1. What is Data Science?
 
 * 2. Tools for Data Science
