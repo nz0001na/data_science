@@ -647,6 +647,13 @@ For this lab you must create and execute queries against the ClassicModels datab
 
 https://www.youtube.com/watch?v=u96rVINbAUI
 
+https://www.youtube.com/watch?v=7sGGeOpLqqA
+
+https://www.youtube.com/watch?v=7_YrwTOPl9w
+
+https://www.youtube.com/watch?v=5OdVJbNCSso
+
+
 3.  Here is the link to download the script file to create the MySQL Sample "Classic Models" database.  
 
  https://drive.google.com/file/d/15JGSiwNi8RwJGn745mDKCQbVMAJEOMfH/view?usp=sharing
