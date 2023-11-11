@@ -6,6 +6,17 @@ Coursera link: https://www.coursera.org/professional-certificates/ibm-data-scien
 
 * 1. What is Data Science?
 
+define data science
+
+what do data scientists do?
+
+Big data and data mining
+
+deep learning and machine learning
+
+
+
+   
 * 2. Tools for Data Science
 
 * 3. Data Science Methodology
