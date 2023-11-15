@@ -1,6 +1,7 @@
 # Data Science
 This repository collects some material about data science.
 
+
 # 1. SQL
 
 SQL Practice from Coursera: [[The Structured Query Language (SQL)]](https://www.coursera.org/learn/the-structured-query-language-sql?specialization=databases-for-data-scientists)
