@@ -19,6 +19,14 @@ deep learning and machine learning
    
 * 2. Tools for Data Science
 
+Python
+
+SQL
+
+Java
+
+
+
 * 3. Data Science Methodology
 
 * 4. Python for Data Science, AI & Development
