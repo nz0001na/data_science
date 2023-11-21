@@ -16,23 +16,23 @@ Coursera link: https://www.coursera.org/professional-certificates/ibm-data-scien
   
 ## 2. Tools for Data Science
 
-* Python
+### Python
 
-* SQL
+### SQL
   
-* Jupyter
+### Jupyter
   
-  ** JupyterLab:
+#### JupyterLab:
 
    Start in terminal with: 
 
               jupyter lab
   
-  ** Online:
+#### Online:
   
   Google Colabratory (through google drive)
   
-* R
+### R
 
     Install RStudio on Ubuntu: https://www.youtube.com/watch?v=uY7_RUHbDds
 
