@@ -21,11 +21,16 @@ Coursera link: https://www.coursera.org/professional-certificates/ibm-data-scien
 * SQL
   
 * Jupyter
-  JupyterLab:  Start JupyterLab using: 
+  
+  ** JupyterLab:
+
+   Start in terminal with: 
 
               jupyter lab
   
-  Online:  Google Colabratory (through google drive)
+ ** Online:
+  
+    Google Colabratory (through google drive)
   
 * R
 
