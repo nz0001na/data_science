@@ -4,44 +4,43 @@ Coursera link: https://www.coursera.org/professional-certificates/ibm-data-scien
 
 # Some courses:
 
-* 1. What is Data Science?
+## 1. What is Data Science?
 
-define data science
+* define data science
 
-what do data scientists do?
+* what do data scientists do?
 
-Big data and data mining
+* Big data and data mining
 
-deep learning and machine learning
+* deep learning and machine learning
+  
+## 2. Tools for Data Science
 
+* Python
 
+* SQL
 
-   
-* 2. Tools for Data Science
+* R
 
-Python
-
-SQL
-
-R
-
+Install RStudio on Ubuntu: https://www.youtube.com/watch?v=uY7_RUHbDds
 
 
-* 3. Data Science Methodology
 
-* 4. Python for Data Science, AI & Development
+##  3. Data Science Methodology
 
-* 5. Python Project for Data Science
+##  4. Python for Data Science, AI & Development
 
-* 6. Databases and SQL for Data Science with Python
+##  5. Python Project for Data Science
 
-* 7. Data Analysis with Python
+##  6. Databases and SQL for Data Science with Python
 
-* 8. Data Visualization with Python
+##  7. Data Analysis with Python
 
-* 9. Machine Learning with Python
+##  8. Data Visualization with Python
 
-* 10. Applied Data Science Capstone
+##  9. Machine Learning with Python
+
+##  10. Applied Data Science Capstone
 
 
 
