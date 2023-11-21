@@ -19,10 +19,14 @@ Coursera link: https://www.coursera.org/professional-certificates/ibm-data-scien
 * Python
 
 * SQL
-
+  
+* Jupyter
+  
+  Online:  Google Colabratory (through google drive)
+  
 * R
 
-Install RStudio on Ubuntu: https://www.youtube.com/watch?v=uY7_RUHbDds
+    Install RStudio on Ubuntu: https://www.youtube.com/watch?v=uY7_RUHbDds
 
 
 
