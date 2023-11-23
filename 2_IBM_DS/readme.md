@@ -36,6 +36,7 @@ Coursera link: https://www.coursera.org/professional-certificates/ibm-data-scien
 
     Install RStudio on Ubuntu: https://www.youtube.com/watch?v=uY7_RUHbDds
 
+### Git -- Version Control
 
 
 ##  3. Data Science Methodology
