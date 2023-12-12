@@ -30,12 +30,27 @@ Coursera link: https://www.coursera.org/professional-certificates/ibm-data-scien
 
 * Applied Data Science Capstone
 
-# Data Cleaning
-
-
-# Data Visualization
-
 
 # big data processing tools
 ## Hadoop
 ## Spark
+
+
+# Version Control System
+## Git:
+
+Install on Ubuntu: https://www.digitalocean.com/community/tutorials/how-to-install-git-on-ubuntu-20-04#setting-up-git
+
+
+
+
+
+
+
+
+
+
+
+
+
+
