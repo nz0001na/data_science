@@ -46,6 +46,7 @@ Coursera link: https://www.coursera.org/professional-certificates/ibm-data-scien
 ##  5. Python Project for Data Science
 
 ##  6. Databases and SQL for Data Science with Python
+### MySQL
 
 ##  7. Data Analysis with Python
 
