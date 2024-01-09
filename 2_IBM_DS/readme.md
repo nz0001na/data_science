@@ -2,7 +2,7 @@
 
 link: https://www.coursera.org/professional-certificates/ibm-data-science
 
-# Some courses:
+# The courses:
 
 ## 1. What is Data Science?
 
