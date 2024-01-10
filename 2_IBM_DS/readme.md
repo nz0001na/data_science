@@ -50,6 +50,7 @@ link: https://www.coursera.org/professional-certificates/ibm-data-science
 
 ##  7. Data Analysis with Python
 
+
 ##  8. Data Visualization with Python
 
 ##  9. Machine Learning with Python
