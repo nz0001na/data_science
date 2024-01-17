@@ -8,7 +8,7 @@ SQL Practice from Coursera: [[The Structured Query Language (SQL)]](https://www.
 
 # 2. IBM Data Science Professional Certificate
 
-Coursera[[link]](https://www.coursera.org/professional-certificates/ibm-data-science)
+Coursera [[link]](https://www.coursera.org/professional-certificates/ibm-data-science)
 
 * What is Data Science?
 
