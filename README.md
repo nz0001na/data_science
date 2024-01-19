@@ -10,7 +10,7 @@ SQL Practice from Coursera: [[The Structured Query Language (SQL)]](https://www.
 
 Coursera [[link]](https://www.coursera.org/professional-certificates/ibm-data-science)
 
-* What is Data Science?
+* What is Data Science
 
 * Tools for Data Science
 
