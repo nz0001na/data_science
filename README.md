@@ -39,7 +39,7 @@ Coursera [[link]](https://www.coursera.org/professional-certificates/ibm-data-sc
 # Version Control System
 ## Git:
 
-  Install Git on Ubuntu: [[Youtube]](https://www.youtube.com/watch?v=ljV8AedhFE8)
+ Install Git on Ubuntu: [[Youtube]](https://www.youtube.com/watch?v=ljV8AedhFE8)
 
 
 
