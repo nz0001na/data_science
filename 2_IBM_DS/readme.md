@@ -1,6 +1,6 @@
 # IBM Data Science Professional Certificate Courses
 
-[[link]](https://www.coursera.org/professional-certificates/ibm-data-science)
+Data Asience [[link]](https://www.coursera.org/professional-certificates/ibm-data-science)
 
 # Courses:
 
