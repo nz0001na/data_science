@@ -49,9 +49,14 @@ Data science [[link]](https://www.coursera.org/professional-certificates/ibm-dat
 ### MySQL
 
 ##  7. Data Analysis with Python
-
+### Data Preprocessing
+### Data Exploration
+### Model Development
+### Model Evaluation and Refinement
 
 ##  8. Data Visualization with Python
+### Matplotlib
+### Seaborn
 
 ##  9. Machine Learning with Python
 
