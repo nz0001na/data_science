@@ -57,6 +57,10 @@ Data science [[link]](https://www.coursera.org/professional-certificates/ibm-dat
 ##  8. Data Visualization with Python
 ### Matplotlib
 ### Seaborn
+### Pandas
+### Folium
+### Plotly
+### Pywaffle
 
 ##  9. Machine Learning with Python
 
