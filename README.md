@@ -1,5 +1,5 @@
 # Data Science
-This repository collects some material about data science.
+This repository collects some materials about data science.
 
 
 # 1. SQL
