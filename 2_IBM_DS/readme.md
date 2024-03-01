@@ -61,6 +61,12 @@ Data science [[link]](https://www.coursera.org/professional-certificates/ibm-dat
 ### Folium
 ### Plotly
 ### Pywaffle
+### Dashboard tools:
+
+  https://pyviz.org/dashboarding/
+
+  https://www.theguardian.com/news/datablog/2013/mar/15/john-snow-cholera-map
+
 
 ##  9. Machine Learning with Python
 
