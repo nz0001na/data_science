@@ -35,15 +35,19 @@ Coursera [[link]](https://www.coursera.org/professional-certificates/ibm-data-sc
   [[coderbyte]](https://coderbyte.com/challenges)
   
   SQL and Data Interview Questions  [[DataLemur]](https://datalemur.com/questions)
+  
   Book:  Ace the data science interview, by Kevin Huo, Nick Singh.
 
 # 4. Big data processing tools
+
 ## Hadoop  
+
 Book:  Hadoop The Definitive Guide, Storage and analysis at internet scale, by Tom White
 
 ## Spark
 
 # Visualization Tools
+
 
 # Version Control System
 ## Git:
