@@ -30,11 +30,14 @@ Coursera [[link]](https://www.coursera.org/professional-certificates/ibm-data-sc
 
 * Applied Data Science Capstone
 
+# 3 Problems -- coding
 
-# big data processing tools
+
+# Big data processing tools
 ## Hadoop
 ## Spark
 
+# Visualization Tools
 
 # Version Control System
 ## Git:
