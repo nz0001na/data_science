@@ -30,7 +30,7 @@ Coursera [[link]](https://www.coursera.org/professional-certificates/ibm-data-sc
 
 * Applied Data Science Capstone
 
-# 3 Problems -- coding
+# 3 Problems -- DS
 
   [[coderbyte]](https://coderbyte.com/challenges)
   
@@ -38,7 +38,11 @@ Coursera [[link]](https://www.coursera.org/professional-certificates/ibm-data-sc
   
   Book:  Ace the data science interview, by Kevin Huo, Nick Singh.
 
-# 4. Big data processing tools
+# 4. Problems -- ML
+
+
+
+# Big data processing tools
 
 ## Hadoop  
 
@@ -47,6 +51,10 @@ Book:  Hadoop The Definitive Guide, Storage and analysis at internet scale, by T
 ## Spark
 
 # Visualization Tools
+
+
+
+
 
 
 # Version Control System
