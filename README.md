@@ -32,6 +32,10 @@ Coursera [[link]](https://www.coursera.org/professional-certificates/ibm-data-sc
 
 # 3 Problems -- coding
 
+  [[coderbyte]](https://coderbyte.com/challenges)
+  
+  SQL and Data Interview Questions  [[DataLemur]](https://datalemur.com/questions)
+  
 
 # Big data processing tools
 ## Hadoop
