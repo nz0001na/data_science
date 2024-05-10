@@ -73,24 +73,24 @@ Solution:
 
 Use lag(), available in MySQL 8.0:
 
-        select date_format(joindate, '%Y-%m-01') joinmonth,
-            count(*) - lag(count(*), 1, 0) over(order by date_format(joindate, '%Y-%m-01')) m2m
+        select date_format(joindate, '%Y-%m-01') as Month,
+            count(*) - lag(count(*), 1, 0) over(order by date_format(joindate, '%Y-%m-01')) MonthToMonthChange
         from userlog
-        group by joinmonth
+        group by Month
         
 Note that I changed the logic to truncate dates to the first of month to use date_format().
 
 In earlier versions, you can use a correlated subquery:
 
-      select date_format(joindate, '%Y-%m-01') joinmonth,
+      select date_format(joindate, '%Y-%m-01') Month,
           count(*) - (
               select count(*)
               from userlog l1
               where l1.joindate >= date_format(l.joindate, '%Y-%m-01') - interval 1 month
                 and l1.joindate <  date_format(l.joindate, '%Y-%m-01')
-          ) m2m
+          ) MonthToMonthChange
       from userlog l
-      group by joinmonth
+      group by Month
       LIMIT 12 OFFSET 1
 
 
