@@ -7,9 +7,9 @@ SQL Questions
 
  The table provided shows all new users signing up on a specific date in the format YYYY-MM-DD. Your query should output the change from one month to the next. Because the first month has no preceding month, your output should skip that row. Your output should look like the following table.
 
-My table data:
+My table data: userlog
         
-        ID    DateJoined
+        ID    joindate
         
         1     2017-01-06
         
