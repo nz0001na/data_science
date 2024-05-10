@@ -3,6 +3,8 @@ SQL Questions
 
 # Problem 1
 
+[Question Link](https://stackoverflow.com/questions/64608365/write-query-to-display-look-like-in-image)
+
  The table provided shows all new users signing up on a specific date in the format YYYY-MM-DD. Your query should output the change from one month to the next. Because the first month has no preceding month, your output should skip that row. Your output should look like the following table.
 
 My table data:
@@ -62,7 +64,7 @@ My table data:
         28    2017-05-25
 
 
-
+I want this output: count all records from every month and subtract it from the next month record.
 
 
 
